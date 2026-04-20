@@ -12,6 +12,8 @@ public class TileGraphicFactory {
 
     private static final int TILE_SIZE = 50;
 
+
+
     public static Rectangle getTileRectangle(Tile tile) {
         Rectangle rect = tileRectangleMap.get(tile);
         if (rect != null) {
@@ -29,6 +31,7 @@ public class TileGraphicFactory {
             } else if (tile instanceof SwampTile) {
                 rect.setFill(Color.DARKGREEN);
             }
+            tileRectangleMap.put(tile, rect);
         }
         return rect;
     }
